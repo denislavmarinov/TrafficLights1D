@@ -25,7 +25,12 @@ for ($j=1; $j < count($exploded_roadMap);) {
 		}
 	$j++;
 }
+$lenght = count($roadMap);
+$road_Map = [];
+for ($h=1; $h <= $lenght; $h++) { 
+	$road_Map[$h] = explode(", ", $roadMap[$h]);
+}
 if($user_errors == FALSE){
-	$_SESSION['roadMap'] = $roadMap;
+	$_SESSION['roadMap'] = $road_Map;
 	header("Location: road_map.php");
 }
