@@ -33,7 +33,7 @@ session_start();
 		// Show the input lines for every subarray data
 				for ($i=1; $i <= $elements;) {
 					// Display the form inputs
-					echo "Enter the ". $i ." element of the array    <input type='text' name='roadMap[$i]' placeholder='example   24, 7'><p></p>";
+					echo "Enter the ". $i ." element of the array    <input type='text' name='roadMap[$i]' placeholder='example   24,7'><p></p>";
 					$i++;
 				}
 		}

@@ -15,10 +15,10 @@ $exploded_roadMap = [];
 $user_errors = FALSE;
 
 // Implode the data
-$imploded_roadMap = implode(', ', $roadMap);
+$imploded_roadMap = implode(',', $roadMap);
 
 // Explode the data
-$exploded_roadMap = explode(', ', $imploded_roadMap);
+$exploded_roadMap = explode(',', $imploded_roadMap);
 
 //Check if have a non numeric values entered
 for ($j=1; $j < count($exploded_roadMap);) { 
@@ -35,7 +35,7 @@ $road_Map = [];
 
 for ($h=1; $h <= $lenght; $h++) { 
 	// Explode the data array so that it could be useful
-	$road_Map[$h] = explode(", ", $roadMap[$h]);
+	$road_Map[$h] = explode(",", $roadMap[$h]);
 }
 
 for ($e=1; $e < count($road_Map); $e++) { 
@@ -43,7 +43,7 @@ for ($e=1; $e < count($road_Map); $e++) {
 		// Check if string with no number is entered
 		if(count($road_Map[$e]) != 2 && is_numeric($road_Map[$e][$f])){
 			// Set the error variable TRUE if no number string is entered 
-			$user_errors = TRUE; 
+			$user_errors = TRUE;
 			break;
 		}
 		else{
@@ -57,7 +57,7 @@ for ($e=1; $e < count($road_Map); $e++) {
 					break;
 				}
 				//If the next element index is bigger than the last index in the array break the code
-				if($next_element >= count($road_Map[$e])){
+				if($next_element+1 == count($road_Map)){
 					break;
 				}
 				else{
