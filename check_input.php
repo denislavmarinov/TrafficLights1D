@@ -13,6 +13,7 @@ else{
 $imploded_roadMap = NULL;
 $exploded_roadMap = [];
 $user_errors = FALSE;
+$user_error_name = NULL;
 
 // Implode the data
 $imploded_roadMap = implode(',', $roadMap);
@@ -24,6 +25,7 @@ $exploded_roadMap = explode(',', $imploded_roadMap);
 for ($j=1; $j < count($exploded_roadMap);) { 
 		if(!is_numeric($exploded_roadMap[$j])){
 			//If is found a non numeric value set the error variable TRUE
+			$user_error_name = "Non numeric value was found. Please, enter only numbers!";
 			$user_errors = TRUE;
 			break;
 		}
@@ -43,6 +45,7 @@ for ($e=1; $e < count($road_Map); $e++) {
 		// Check if string with no number is entered
 		if(count($road_Map[$e]) != 2 && is_numeric($road_Map[$e][$f])){
 			// Set the error variable TRUE if no number string is entered 
+			$user_error_name = "Please enter a valid input!";
 			$user_errors = TRUE;
 			break;
 		}
@@ -53,6 +56,7 @@ for ($e=1; $e < count($road_Map); $e++) {
 				if($road_Map[$next_element][0]>$road_Map[$next_element+1][0]){
 
 					// Set the error variable TRUE if distance is not growing 
+					$user_error_name = "The meters which you entered are not growing. Please enter growing meters!";
 					$user_errors = TRUE;
 					break;
 				}
@@ -76,5 +80,6 @@ if($user_errors == FALSE){
 }
 // If there are one or more errors send the user back to previous page
 else{
+	$_SESSION['user_error_name'] = $user_error_name;
 	header("Location: index.php");
 }

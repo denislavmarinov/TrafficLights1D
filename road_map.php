@@ -1,14 +1,6 @@
 <?php 
-session_name('traffic_lights');
-session_start();
-?>
-<!DOCTYPE html>
-<html>
-<head>
-	<title>TrafficLights1D</title>
-</head>
-<body>
-<?php
+//Include the header of the document
+include('includes/header.php');
 // Get the data enterted by the user from the session
 $roadMap = $_SESSION['roadMap'];
 // Define the variables
@@ -38,8 +30,9 @@ for ($i=1; $i <= count($roadMap); $i++) {
 		$seconds = (int)$seconds;
 	}
 }
-echo "The seconds that you will need to pass all traffic lights is:   <b>" . $seconds . "</b>";
-echo "<a href='index.php'>Go back</a>";
+echo "The seconds that you will need to pass through all traffic lights is:   <span class='bold'>" . $seconds . "</span><p></p>";
+echo "If you want to try again:  <a href='index.php'>Go back</a>";
+unset($_SESSION['user_error_name']);
 ?>
 </body>
 </html>
