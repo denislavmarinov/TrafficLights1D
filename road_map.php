@@ -1,6 +1,6 @@
 <?php 
 //Include the header of the document
-include('includes/header.php');
+include('include/header.php');
 // Get the data enterted by the user from the session
 $roadMap = $_SESSION['roadMap'];
 // Define the variables
