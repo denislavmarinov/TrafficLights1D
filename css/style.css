@@ -1,7 +1,46 @@
+body{
+	font-family: TimesNewRoman, "Times New Roman", Times, Baskerville, Georgia, serif;
+	font-size: 20px;
+}
 .hide{
 	display: none;
 }
 .bold{
 	font-weight: bold;
-	font-size: 20px;
+}
+h1{
+	text-align: center;
+	border: 1px #000 solid;
+	border-radius: 10px;
+	box-shadow: 10px 10px #ccc;
+	text-shadow: 1px 2px #ccc;
+	margin: 20px;
+	padding: 15px;
+	background: #32cd32;
+}
+form{
+	margin-top: 50px;
+	margin-left: 15px;
+}
+a,input[type=submit]{
+	border: 1px #000 solid;
+	border-radius: 5px;
+	text-align: center;
+	width: 50px;
+	margin:10px;
+	padding: 7.5px;
+	text-decoration: none; 
+}
+a:link, a:visited {
+	color: #000;
+}
+
+a:hover, a:active, input[type=submit]:hover{
+	color: #fff;
+	background-color: #808080;
+	box-shadow: 5px 5px #000;
+}
+input[type=submit]{
+	width: 75px;
+	font-size: 15px;
 }
