@@ -1,6 +1,6 @@
 <?php
 //Include the header of the document
-include('includes/header.php');
+include('include/header.php');
 ?>
 	<h1>Traffic Lights 1D</h1>
 	<!-- Form where the user should write how much subarrays he/she will need  -->
